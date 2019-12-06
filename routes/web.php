@@ -30,6 +30,7 @@ Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/entrar', 'EntrarController@index');
 Route::get('/registrar', 'RegistroController@create');
+Route::get('/sair', '');
 
 
 //Delete

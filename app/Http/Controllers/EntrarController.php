@@ -20,5 +20,11 @@ class EntrarController extends Controller
         return redirect()->route('listar_series');
     }
 
+    public function sair()
+    {
+        Auth::logout();
+        return redirect('/entrar');
+    }
+
 
 }
