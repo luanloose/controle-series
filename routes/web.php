@@ -19,6 +19,8 @@ Auth::routes();
 Route::post('/series/criar', 'SeriesController@store');
 Route::post('/series/{id}/editaNome', 'SeriesController@editaNome');
 Route::post('/temporadas/{temporada}/episodios/assistir', 'EpisodiosController@assistir');
+Route::post('/entrar', 'EntrarController@entrar');
+Route::post('/registrar', 'RegistroController@store');
 
 //Get
 Route::get('/series', 'SeriesController@index')->name('listar_series');
@@ -27,6 +29,8 @@ Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
 Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/entrar', 'EntrarController@index');
+Route::get('/registrar', 'RegistroController@create');
+
 
 //Delete
 Route::delete('/series/{id}', 'SeriesController@destroy');
