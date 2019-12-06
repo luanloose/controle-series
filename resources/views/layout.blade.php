@@ -13,8 +13,15 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 d-flex justify-content-between align-items-center">
 
             <a class="navbar navbar-expand-lg" href="{{ route('listar_series') }}">Home</a>
+            
+            @auth
             <a class="text-danger" href="/sair">Sair</a>
-      
+            @endauth
+            
+            @guest
+            <a class="text-primary" href="/entrar">Entrar</a>  
+            @endguest
+            
         </nav>
     <div class="container">
         <div class="jumbotron">
